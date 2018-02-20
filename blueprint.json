@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2018-02-21T08:34:12+11:00"
+    "timestamp": "2018-02-21T08:40:42+11:00"
   },
   "software": {
     "base": {
@@ -124,9 +124,6 @@
     "file_write_permissions": [
       {
         "path": "/home/app"
-      },
-      {
-        "path": "/home/app/wp-config.php"
       }
     ],
     "persistent_directories": [
