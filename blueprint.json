@@ -2,8 +2,8 @@
   "schema": {
     "type": "app_blueprint",
     "version": {
-      "major": 1,
-      "minor": 0
+      "major": 0,
+      "minor": 1
     },
     "origin": "Engines Developer Studio 0.2"
   },
@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2017-06-12 01:35:04 UTC"
+    "timestamp": "2018-02-21T08:11:27+11:00"
   },
   "software": {
     "base": {
@@ -90,12 +90,10 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "database/sql/mysql",
         "variables": {
-          "name": "_Engines_Builder(engine_name)",
-          "database_host": "_Engines_System(mysql_host)",
           "database_name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mysql_host)",
           "db_username": "_Engines_Builder(engine_name)",
           "db_password": "_Engines_System(random(10))",
-          "db_flavor": "mysql2",
           "collation": "utf8_general_ci",
           "full_access": "0"
         }
