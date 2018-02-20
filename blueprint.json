@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2018-02-21T08:19:00+11:00"
+    "timestamp": "2018-02-21T08:34:12+11:00"
   },
   "software": {
     "base": {
@@ -51,7 +51,7 @@
       },
       "post_install": {
         "language": "sh",
-        "content": "#!/bin/sh\r\ncd /home/app/\r\n/home/engines/scripts/make_persistant.sh .htaccess\r\n chmod g+w /home/fs/persistant/app/wp-content/plugins/\r\n chmod g+w /home/fs/persistant/app/wp-content/uploads/\r\nchmod g+w /home/fs/persistant/app/wp-content/upgrade/\r\n\r\n#Allow ftp plugin installer to see persistant dir as /home/app/wp-content\r\ncd /home/fs/persistant/app\r\nmkdir home\r\ncd home\r\nln -s .. app\r\n\r\n"
+        "content": "#!/bin/sh\r\ncd /home/app/\r\n/home/engines/scripts/make_persistant.sh .htaccess\r\nchmod g+w /home/fs/persistent/app/wp-content/plugins/\r\nchmod g+w /home/fs/persistent/app/wp-content/uploads/\r\nchmod g+w /home/fs/persistent/app/wp-content/upgrade/\r\n\r\n#Allow ftp plugin installer to see persistant dir as /home/app/wp-content\r\ncd /home/fs/persistent/app\r\nmkdir home\r\ncd home\r\nln -s .. app\r\n\r\n"
       },
       "shutdown": {
         "language": "sh"
@@ -83,7 +83,7 @@
           "service_name": "persistent",
           "group": "_Engines_Builder(data_gid)",
           "user": "_Engines_Builder(data_uid)",
-          "engine_path": "persistant"
+          "engine_path": "persistent"
         }
       },
       {
