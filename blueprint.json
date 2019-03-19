@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2018-02-21T13:26:55+11:00"
+    "timestamp": "2019-03-19T18:13:17+11:00"
   },
   "software": {
     "base": {
@@ -59,7 +59,8 @@
     },
     "installed_packages": [
       {
-        "name": " wordpress.tar.gz",
+        "name": "wordpress.tar.gz",
+        "download_type": "http(s)",
         "source_url": "https://wordpress.org/latest.tar.gz",
         "destination": "./",
         "extraction_command": "tar -xzpf ",
@@ -96,18 +97,6 @@
           "db_password": "_Engines_System(random(10))",
           "collation": "utf8_general_ci",
           "full_access": "0"
-        }
-      },
-      {
-        "publisher_namespace": "EnginesSystem",
-        "type_path": "filesystem/service/ftp",
-        "variables": {
-          "folder": "/app/",
-          "volume": "_Engines_Environment(volume_name)",
-          "username": "_Engines_Builder(engine_name)",
-          "password": "_Engines_System(random(8))",
-          "rw_access": "true",
-          "ftp_gid": "_Engines_Builder(data_gid)"
         }
       }
     ],
