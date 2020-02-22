@@ -27,14 +27,14 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2019-06-05T09:10:02+10:00"
+    "timestamp": "2020-02-22T17:55:54+11:00"
   },
   "software": {
     "base": {
       "name": "wordpress",
       "framework": "apache_php",
       "deployment_type": "web",
-      "http_protocol": "http_and_https",
+      "http_protocol": "https_and_http",
       "memory": {
         "required": 96,
         "recommended": 128
@@ -72,6 +72,10 @@
         "name": "curl",
         "type": "php",
         "os_package": "php-curl"
+      },
+      {
+        "name": "rewrite",
+        "type": "apache"
       }
     ],
     "service_configurations": [
@@ -85,7 +89,8 @@
           "permissions": "rw",
           "user": "_Engines_Builder(data_uid)",
           "group": "_Engines_Builder(data_gid)",
-          "fw_user": "_Engines_Builder(cont_user_id)"
+          "fw_user": "_Engines_Builder(cont_user_id)",
+          "exclude_from_backup": "false"
         }
       },
       {
@@ -134,9 +139,6 @@
     },
     "framework_specific": {
       "custom_php_inis": [
-        {
-          "content": "upload_max_filesize=64M;\r\npost_max_size=64M;"
-        },
         {
           "content": "; Maximum allowed size for uploaded files.\r\nupload_max_filesize = 100M\r\n\r\n; Must be greater than or equal to upload_max_filesize\r\npost_max_size = 100M"
         }
